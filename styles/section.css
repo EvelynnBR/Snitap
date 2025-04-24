@@ -1,0 +1,53 @@
+nav{
+    & .flex{
+        justify-content: space-between;
+    
+        padding-block: 1.25rem;
+
+        & img{
+            width: 2rem;
+            height: 2rem;
+        }
+
+        & a{
+            position: relative;
+
+            & span{
+                position: absolute;
+
+                top: -.5rem;
+                right: -.5rem;
+                background-color: var(--snitap-sun);
+                padding: 2px 7px;
+                border-radius: 50%;
+                
+                font: 400 .75rem/1.3 var(--font-inter);
+                color: var(--text-color);
+
+            }
+        }
+    }
+
+    @media (width >= 80em){
+        .flex{
+            padding-block: 1.25rem;
+
+
+            img[src*="logo"]{
+                transition: transform 500ms ease;
+            }
+    
+            img[src*="logo"]:hover{
+              transform: rotate(180deg);
+            }
+    
+            img[src*="shoppind"]{
+                transition: transform 500ms ease;
+            }
+    
+            img[src*="shopping"]:hover{
+              transform: rotate(-30deg);
+            }
+        }
+    }
+}
