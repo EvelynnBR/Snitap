@@ -415,3 +415,51 @@ nav{
         }
     }
 }
+
+#banner{
+    margin-inline: auto;
+    max-width: 100%;
+    padding-block: 1.5rem;
+    overflow: hidden;
+
+    & .scroller{
+        max-width: 100%;
+        overflow: hidden;
+        padding-block: 1rem;
+
+        & .rolling{
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+
+            animation: rolling 2s linear infinite;
+        }
+    }
+
+    & .bg-animate{
+        background: linear-gradient(
+            45deg,
+            var(--snitap-sky-mid),
+            var(--snitap-joy-light)
+        );
+        background-size: 400%;
+        background-position: 0 50%;
+        animation: bg-animate 20s ease infinite;
+    }
+}
+@keyframes rolling{
+    100%{
+        transform: translateX(-132px);
+    }
+}
+@keyframes bg-animate{
+    50%{
+        background-position: 100% 50%;
+    }
+}
+
+@media (width >= 80em){
+    #banner{
+        padding-block: 2.5rem;
+    }
+}
