@@ -55,7 +55,6 @@ nav{
 #hero{
     flex-direction: column;
     align-items: center;
-    overflow-x: hidden;
     padding-block: 1.5rem;
     & .img-animation{
         position: relative;
@@ -98,7 +97,7 @@ nav{
     }
 
     & .text-animation{
-        
+        flex-direction: column;
         & h1 div{
             display: inline-block;
             vertical-align: bottom;
@@ -122,14 +121,45 @@ nav{
             }
 
         }
+
+        & .btn{
+            display: grid;
+            margin-top: 3rem;
+            gap: 1.5rem;
+
+            & a{
+                font: var(--btn-label);
+            }
+
+            & a:nth-child(1){
+                align-items: center;
+                gap: .75rem;
+
+                & span{
+                    display: flex;
+                    background-color: white;
+                    border-radius: 50%;
+                    padding: 1.5rem;
+                }
+            
+            }
+
+            & a:nth-child(2){
+                justify-content: center;
+                padding: 1.5rem 3rem;
+                border-radius: 5rem;
+                gap: .75rem;
+                background-color: var(--snitap-sun);
+
+                & img{
+                    vertical-align: bottom;
+                }
+            }
+        }
     }
 
     & .img-animation + .text-animation{
         margin-top: 2.5rem;
-    }
-
-    @media (width >= 80em){
-
     }
     
 }
@@ -289,6 +319,36 @@ nav{
         
             & h1 div{
                 height: 5rem;
+            }
+
+            & .btn{
+                display: flex;
+                
+                flex-direction: row-reverse;
+                justify-content: start;
+                gap: 2rem;
+
+                & a{
+                    transition: transform 350ms;
+                }
+                
+                & a:nth-child(2){
+                    & img{
+                        margin-right: .75rem;
+                    }
+                }
+            }
+
+            & .shadow{
+                box-shadow:
+                0 2px 5px rgb(0 0 0 / .1),
+                0 9px 9px rgb(0 0 0 / .09),
+                0 20px 12px rgb(0 0 0 / .05),
+                0 36px 15px rgb(0 0 0 / .01);
+            }
+
+            & a:hover{
+                transform: scale(1.1);
             }
         }
     }
