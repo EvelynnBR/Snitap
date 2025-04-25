@@ -117,7 +117,7 @@ nav{
 
             & span{
                 display: block;
-                animation: slideUp 6s infinite ease;
+                animation: slideUp 6s 2s infinite ease;
             }
 
         }
@@ -323,7 +323,7 @@ nav{
 
             & .btn{
                 display: flex;
-                
+
                 flex-direction: row-reverse;
                 justify-content: start;
                 gap: 2rem;
