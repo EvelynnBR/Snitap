@@ -72,12 +72,15 @@ nav{
             left: 50%;
             transform: translate(-50%);
 
+            animation:  move-bg 2.5s ease;
         }
 
         img[src*="patins-image"]{
             left: 50%;
             transform: translate(-50%);
             width: 19.5rem;
+
+            animation: move-patins 2s ease;
         }
 
         img[src*="Stars 1"]{
@@ -86,6 +89,7 @@ nav{
 
             width: 3.5rem;
 
+            animation: move-stars 2s ease;
         }
 
         img[src*="Stars 2"]{
@@ -93,6 +97,8 @@ nav{
             right: .1rem;
 
             width: 1.5rem;
+
+            animation: move-stars 2.5s ease;
         }
     }
 
@@ -281,9 +287,6 @@ nav{
     
                 left: 50%;
                 transform: translate(-50%);
-
-                animation:  move-bg 2.5s ease;
-    
             }
     
             img[src*="patins-image"]{
@@ -292,17 +295,12 @@ nav{
                 transform: translate(-50%);
                 width: 30.5rem;
                 z-index: 10;
-
-                animation: move-patins 2s ease;
             }
     
             img[src*="Stars 1"]{
                 top: 5.375rem;
                 left: 1.5rem;
                 width: 5.5rem;
-
-                animation: move-stars 2s ease;
-    
             }
     
             img[src*="Stars 2"]{
@@ -310,7 +308,6 @@ nav{
                 right: -.4rem;
     
                 width: 2.5rem;
-                animation: move-stars 2s ease;
             }
         }
 
