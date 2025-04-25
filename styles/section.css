@@ -197,6 +197,39 @@ nav{
         transform: translatey(-7.5rem);
     }
 }
+@keyframes move-bg{
+    0%{
+        transform: translateX(30rem);
+    }
+    50%{
+        transform: translateX(-16rem);
+    }
+    100%{
+        transform: translateX();
+    }
+}
+@keyframes move-stars{
+    0%{
+        transform: translateX(60rem);
+    }
+    50%{
+        transform: translateX(-1rem);
+    }
+    100%{
+        transform: translateX();
+    }
+}
+@keyframes move-patins{
+    0%{
+        transform: translateX(20rem);
+    }
+    50%{
+        transform: translateX(-16rem);
+    }
+    100%{
+        transform: translateX();
+    }
+}
 @media (width >= 80em){
     #hero{
         flex-direction: row-reverse;
@@ -217,6 +250,8 @@ nav{
     
                 left: 50%;
                 transform: translate(-50%);
+
+                animation:  move-bg 2.5s ease;
     
             }
     
@@ -225,13 +260,17 @@ nav{
                 left: 50%;
                 transform: translate(-50%);
                 width: 30.5rem;
+                z-index: 10;
+
+                animation: move-patins 2s ease;
             }
     
             img[src*="Stars 1"]{
                 top: 5.375rem;
                 left: 1.5rem;
-    
                 width: 5.5rem;
+
+                animation: move-stars 2s ease;
     
             }
     
@@ -240,6 +279,7 @@ nav{
                 right: -.4rem;
     
                 width: 2.5rem;
+                animation: move-stars 2s ease;
             }
         }
 
