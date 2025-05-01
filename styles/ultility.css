@@ -7,7 +7,6 @@
 .desktop-only{
     display: none;
 }
-
 @media (width >= 80em) {
     .container{
         --max-width: 80em;
@@ -32,6 +31,10 @@ h1, h2{
 }
 h1{
     font: var(--h1);
+}
+
+h2{
+    font: var(--h2);
 }
 
 .flex{
